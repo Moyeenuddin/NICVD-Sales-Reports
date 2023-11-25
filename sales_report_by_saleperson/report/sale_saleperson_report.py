@@ -34,8 +34,8 @@ class SaleSalepersonReport(models.AbstractModel):
             print res
             return res
         elif start_date == end_date:
-            #date_1 = datetime.datetime.strptime(self.end_date, "%Y-%m-%d")
-            #endd_date = date_1 + datetime.timedelta(days=1)
+            # date_1 = datetime.datetime.strptime(self.end_date, "%Y-%m-%d")
+            # endd_date = date_1 + datetime.timedelta(days=1)
             sql_query = """ SELECT p.login as user_name, r.name as full_name, Count(s.user_id) as patient, sum(s.amount_total) as total
                         FROM sale_order s left join res_users p on p.id = s.user_id left join res_partner r on  r.id = p.partner_id
                         WHERE state= 'sale' AND Date_trunc('day', date_order) BETWEEN %s AND %s
@@ -48,7 +48,7 @@ class SaleSalepersonReport(models.AbstractModel):
             print res
             return res
         else: 
-            #end_dt = datetime.strptime(end_date, '%Y-%m-%dT%H:%M:%S.%fZ')
+            # end_dt = datetime.strptime(end_date, '%Y-%m-%dT%H:%M:%S.%fZ')
             
             sql_query = """ SELECT p.login as user_name, r.name as full_name, Count(s.user_id) as patient, sum(s.amount_total) as total
                             FROM sale_order s left join res_users p on p.id = s.user_id left join res_partner r on  r.id = p.partner_id

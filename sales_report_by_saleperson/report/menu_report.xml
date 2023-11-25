@@ -33,5 +33,13 @@
                 file="sales_report_by_saleperson.sale_productcate_report"
                 name="sales_report_by_saleperson.sale_productcate_report"
         />
+         <report
+                id="action_bill_collection_report"
+                string="Detailed Collection Report by Salesperson"
+                model="bill.collection"
+                report_type="qweb-pdf"
+                file="sales_report_by_saleperson.bill_collection_report"
+                name="sales_report_by_saleperson.bill_collection_report"
+        />
     </data>
 </odoo>

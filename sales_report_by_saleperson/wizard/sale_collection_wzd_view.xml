@@ -27,17 +27,17 @@
         </record>
 
         <record id="action_collection_report_salesperson_wizard" model="ir.actions.act_window">
-            <field name="name">Collection Report By Sale Person</field>
+            <field name="name">Collection Report By Salesperson</field>
             <field name="res_model">sale.collection</field>
             <field name="view_type">form</field>
             <field name="view_mode">form</field>
             <field name="target">new</field>
         </record>
 
-        <menuitem id="menu_collection_report_salesperson_wizard"
-                  name="Collection By Sale-Person"
-                  action="action_collection_report_salesperson_wizard"
-                  parent="sales_team.menu_sale_report"
-                  sequence="2"/>
+<!--        <menuitem id="menu_collection_report_salesperson_wizard"-->
+<!--                  name="Collection By Salesperson"-->
+<!--                  action="action_collection_report_salesperson_wizard"-->
+<!--                  parent="sales_team.menu_sale_report"-->
+<!--                  sequence="2"/>-->
     </data>
 </odoo>
