@@ -33,7 +33,7 @@
     </record>
 
     <menuitem id="menu_action_wizard_bill_collection_report "
-                  name="Detailed Collection Report by Salesperson"
+                  name="User-wise detail collection report"
                   action="action_wizard_bill_collection_report"
                   parent="sales_team.menu_sale_report"
                   sequence="2"/>
