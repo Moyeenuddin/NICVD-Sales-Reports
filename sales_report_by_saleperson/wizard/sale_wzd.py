@@ -8,9 +8,10 @@ from datetime import datetime
 
 class SaleSalespersonReport(models.TransientModel):
     _name = 'sale.salesperson.report'
-
-    start_date = fields.Date('Start Date', default=fields.Date.today(), required=True)
-    end_date = fields.Date(string="End Date", default=fields.Date.today(), required=True)
+    start_date=fields.Datetime('Start Date', default=fields.Datetime.now(), required=True)
+    end_date=fields.Datetime(string="End Date", default=fields.Datetime.now(), required=True)
+    # start_date = fields.Date('Start Date', default=fields.Date.today(), required=True)
+    # end_date = fields.Date(string="End Date", default=fields.Date.today(), required=True)
     user_ids = fields.Many2many('res.users', string="Sales Person")
 
     @api.multi

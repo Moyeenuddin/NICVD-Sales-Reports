@@ -6,8 +6,10 @@ from odoo import api, fields, models
 class BillCollection(models.TransientModel):
     _name = 'bill.collection'
 
-    start_date = fields.Date('Start Date', default=fields.Date.today(), required=True)
-    end_date = fields.Date(string="End Date", default=fields.Date.today(), required=True)
+    # start_date = fields.Date('Start Date', default=fields.Date.today(), required=True)
+    start_date = fields.Datetime('Start Date', default=fields.Datetime.now(), required=True)
+    # end_date = fields.Date(string="End Date", default=fields.Date.today(), required=True)
+    end_date=fields.Datetime(string="End Date", default=fields.Datetime.now(), required=True)
     user_ids = fields.Many2many('res.users', string="Bill User")
 
     @api.multi

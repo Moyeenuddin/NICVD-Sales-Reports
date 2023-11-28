@@ -14,6 +14,8 @@
                         <p>
                             Date from :
                             <span t-esc="start_date"/>
+<!--                            <span t-esc="start_date.strftime('%d-%m-%Y, %I:%M%p')"/>-->
+<!--                            <span t-esc="datetime.strptime(start_date, '%Y-%m-%d %H:%M:%S').strftime('%d-%m-%Y, %I:%M%p')"/>-->
                             <br/>
                             Date to :
                             <span t-esc="end_date"/>
@@ -23,7 +25,7 @@
                     <div class="col-xs-4">
                         <p>
                             Printing Date :
-                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d, %I:%M%p')"/>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d-%m-%Y, %I:%M%p')"/>
                             <br/>
                             Printing By :
                             <span t-esc="user.name"/>
